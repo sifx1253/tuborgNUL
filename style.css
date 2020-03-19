@@ -1,6 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+/* GENERELT */
+p,
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0 7vw;
+}
+
+nav a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* TOPPEN */
 header {
     width: 100vw;
-
 }
 
 header nav {
@@ -8,7 +27,10 @@ header nav {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-end;
-
+    background-color: #093A82;
+    color: white;
+    font-size: 2rem;
+    max-width: 93.3vw;
 }
 
 
@@ -17,13 +39,12 @@ header nav a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    padding: 0.5rem;
-
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 5vw;
 }
 
-header nav a:visited {
-
-}
+header nav a:visited {}
 
 .hidden {
     transform: translateX(-100%);
@@ -33,10 +54,53 @@ header nav a:visited {
 
 #menuknap {
     display: inline-block;
-    margin: 0.5rem;
+    margin-right: 5vw;
+    font-family: 'Open Sans', sans-serif;
+    /*margin: 0.5rem;*/
 }
 
+/* INDHOLD */
+/* INDHOLD FØRSTE TEKST */
+#section_1 {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    flex-direction: row-reverse;
+}
 
+.foto_1,
+.txt_1 {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+.txt_1 {
+    margin-top: 10vw;
+    margin-bottom: 2vw;
+}
+
+.foto_1 {
+    max-width: 70vw;
+    margin: auto;
+}
+
+/* INDHOLD ANDEN TEKST */
+#section_2 {
+    margin-top: 15vw;
+    position: relative;
+    text-align: center;
+}
+
+.txt_2 {
+    position: absolute;
+    max-width: 70vw;
+    top: 10vw;
+    left: 22vw;
+}
+
+/* INDHOLD TREDJE TEKST */
+.txt_3 {
+    margin-top: 15vw;
+}
 
 @media only screen and (min-width:800px) {
 
@@ -53,18 +117,41 @@ header nav a:visited {
     header li {
         display: inline-block;
         letter-spacing: 1px;
+        margin-left: 2vw;
     }
 
     header nav {
-        padding: 0.1rem;
-        height: 70px;
+        max-width: 97.6vw;
+        height: 50px;
+    }
+
+    ul {
+        margin-top: 0.2em;
+        margin-right: 2rem;
     }
 
 
     header nav li {
-        padding: 0.2rem;
+        /*        padding: 0.2rem;
         background-color: transparent;
         margin: 0.2rem;
-        text-decoration: none;
+        text-decoration: none;*/
+    }
+
+    #splash img {}
+
+
+    /* INDHOLD */
+
+    /*Dette gøres for at tekst kan komme ovenpå billedet */
+    #section_2 {
+        position: relative;
+        text-align: center;
+    }
+
+    .txt_2 {
+        position: absolute;
+        left: 70vw;
+        top: 20vw;
     }
 }
